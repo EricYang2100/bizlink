@@ -1,0 +1,63 @@
+[{
+  "_id": {
+    "$oid": "60b9bc99b8138e3ff59b0165"
+  },
+  "categoryName": "L1_1",
+  "parentId": "0",
+  "orderNum": 0,
+  "status": "0",
+  "createTime": {
+    "$date": "2021-06-04T05:39:37.213Z"
+  },
+  "updateTime": {
+    "$date": "2021-06-04T05:39:37.213Z"
+  },
+  "_class": "com.welinkdata.gateway.bizApp.saleGoods.domain.ProductCategory"
+},{
+  "_id": {
+    "$oid": "60b9bca3b8138e3ff59b0166"
+  },
+  "categoryName": "L1_2",
+  "parentId": "0",
+  "orderNum": 1,
+  "status": "0",
+  "createTime": {
+    "$date": "2021-06-04T05:39:47.407Z"
+  },
+  "updateTime": {
+    "$date": "2021-06-04T05:39:47.407Z"
+  },
+  "_class": "com.welinkdata.gateway.bizApp.saleGoods.domain.ProductCategory"
+},{
+  "_id": {
+    "$oid": "60b9bcb4b8138e3ff59b0167"
+  },
+  "categoryName": "L1_1_1",
+  "parentId": "60b9bc99b8138e3ff59b0165",
+  "orderNum": 0,
+  "ancestors": "60b9bc99b8138e3ff59b0165",
+  "status": "0",
+  "createTime": {
+    "$date": "2021-06-04T05:40:04.815Z"
+  },
+  "updateTime": {
+    "$date": "2021-06-04T05:40:04.815Z"
+  },
+  "_class": "com.welinkdata.gateway.bizApp.saleGoods.domain.ProductCategory"
+},{
+  "_id": {
+    "$oid": "60b9bccdb8138e3ff59b0168"
+  },
+  "categoryName": "L1_1_1_1",
+  "parentId": "60b9bcb4b8138e3ff59b0167",
+  "orderNum": 0,
+  "ancestors": "60b9bc99b8138e3ff59b0165-60b9bcb4b8138e3ff59b0167",
+  "status": "0",
+  "createTime": {
+    "$date": "2021-06-04T05:40:29.382Z"
+  },
+  "updateTime": {
+    "$date": "2021-06-04T05:40:29.382Z"
+  },
+  "_class": "com.welinkdata.gateway.bizApp.saleGoods.domain.ProductCategory"
+}]

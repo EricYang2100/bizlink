@@ -9,6 +9,21 @@ export function listUser(query) {
     params: query
   })
 }
+// 查询用户名称字典数据
+export function userDictList() {
+  return request({
+    url: '/system/user/dictList',
+    method: 'get'
+  })
+}
+
+// 查询部门下的用户列表
+export function deptSelect(deptId) {
+  return request({
+    url: '/system/user/deptSelect/' + praseStrEmpty(deptId),
+    method: 'get'
+  })
+}
 
 // 查询用户详细
 export function getUser(userId) {

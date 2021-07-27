@@ -1,0 +1,74 @@
+[{
+  "_id": {
+    "$oid": "60d2da54d74be8233e592287"
+  },
+  "docPath": "mydoc.test.doc1",
+  "sysName": "s1",
+  "fieldName": "字符串1",
+  "columnType": "String",
+  "status": "0",
+  "orderNum": 1,
+  "parentId": "0",
+  "createTime": {
+    "$date": "2021-06-23T06:53:08.774Z"
+  },
+  "updateTime": {
+    "$date": "2021-06-23T06:53:08.774Z"
+  },
+  "_class": "com.welinkdata.gateway.bizCell.domain.DocField"
+},{
+  "_id": {
+    "$oid": "60d2da88d74be8233e592288"
+  },
+  "docPath": "mydoc.test.doc1",
+  "sysName": "n1",
+  "fieldName": "数字1",
+  "columnType": "Number",
+  "status": "0",
+  "orderNum": 2,
+  "parentId": "0",
+  "createTime": {
+    "$date": "2021-06-23T06:54:00.722Z"
+  },
+  "updateTime": {
+    "$date": "2021-06-23T06:54:00.722Z"
+  },
+  "remark": "数字1",
+  "_class": "com.welinkdata.gateway.bizCell.domain.DocField"
+},{
+  "_id": {
+    "$oid": "60d2dab6d74be8233e592289"
+  },
+  "docPath": "mydoc.test.doc1",
+  "sysName": "d1",
+  "fieldName": "日期1",
+  "columnType": "DateTime",
+  "status": "0",
+  "orderNum": 3,
+  "parentId": "0",
+  "createTime": {
+    "$date": "2021-06-23T06:54:46.934Z"
+  },
+  "updateTime": {
+    "$date": "2021-06-23T06:54:46.934Z"
+  },
+  "_class": "com.welinkdata.gateway.bizCell.domain.DocField"
+},{
+  "_id": {
+    "$oid": "60d2db04d74be8233e59228a"
+  },
+  "docPath": "mydoc.test.doc1",
+  "sysName": "image1",
+  "fieldName": "图片1",
+  "columnType": "Image",
+  "status": "0",
+  "orderNum": 4,
+  "parentId": "0",
+  "createTime": {
+    "$date": "2021-06-23T06:56:04Z"
+  },
+  "updateTime": {
+    "$date": "2021-06-23T06:56:17.800Z"
+  },
+  "_class": "com.welinkdata.gateway.bizCell.domain.DocField"
+}]

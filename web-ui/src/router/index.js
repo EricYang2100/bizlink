@@ -95,121 +95,179 @@ export const constantRoutes = [
       }
     ]
   },
-  {
-    path: '/gen',
-    component: Layout,
-    hidden: true,
-    children: [
-      {
-        path: 'edit/:tableId(\\d+)',
-        component: (resolve) => require(['@/views/tool/gen/editTable'], resolve),
-        name: 'GenEdit',
-        meta: { title: '修改生成配置' }
-      }
-    ]
-  },
+  // {
+  //   path: '/gen',
+  //   component: Layout,
+  //   hidden: true,
+  //   children: [
+  //     {
+  //       path: 'edit/:tableId(\\d+)',
+  //       component: (resolve) => require(['@/views/tool/gen/editTable'], resolve),
+  //       name: 'GenEdit',
+  //       meta: { title: '修改生成配置' }
+  //     }
+  //   ]
+  // },
  
 
  
 
-{
-    path: '/appdoc/',
-    component: Layout,
-    hidden: false,
-    meta: { title: '商品管理', icon: '' },
-    children: [
-      {
-        path: 'saleGoods/category/index',
-        component: (resolve) => require(['@/views/appdoc/saleGoods/category/index'], resolve),
-        name: 'category',
-        meta: { title: '商品分类', icon: '' }
-        
-      },
-      {
-        path: 'saleGoods/goods/index',
-        component: (resolve) => require(['@/views/appdoc/saleGoods/productItem/index'], resolve),
-        name: 'productItem',
-        meta: { title: '商品列表', icon: '' }
-        
-      }
-    ]
-  },
 
- 
 
 
   {
-    path: '/bizdoc',
+    path: '/bizCell',
     component: Layout,
     hidden: false,
-    meta: { title: '文档定义', icon: '' },
+    meta: { title: '文档定义', icon: 'table' },
     children: [
       {
         path: 'docTreeItem/index',
-        component: (resolve) => require(['@/views/bizdoc/docTreeItem/index'], resolve),
+        component: (resolve) => require(['@/views/bizCell/docTreeItem/index'], resolve),
         name: 'docTreeItem',
-        meta: { title: '定义树', icon: '' }
+        meta: { title: '文档定义', icon: 'table' }
         
       },
       {
         path: 'docTreeItem/field/:docPath',
-        component: (resolve) => require(['@/views/bizdoc/docTreeItem/field'], resolve),
+        component: (resolve) => require(['@/views/bizCell/fieldAttribute/index'], resolve),
         name: 'field',
         hidden:true,
-        meta: { title: '文档字段定义', icon: '' }
+        meta: { title: '文档字段定义', icon: 'table' }
         
       },
       {
-        path: 'dyncDoc/index',
-        component: (resolve) => require(['@/views/bizdoc/dyncDoc/index'], resolve),
-        name: 'dyncDoc',
-        meta: { title: '动态属性测试', icon: '' }
+        path: 'docTreeItem/test',
+        component: (resolve) => require(['@/views/bizCell/fieldAttribute/test'], resolve),
+        name: 'testTree',
+        meta: { title: 'testTree', icon: 'table' }
+        
+      },
+    
+    ]
+  },
+
+  {
+    path: '/bizDoc',
+    component: Layout,
+    hidden: false,
+    meta: { title: '文档管理', icon: 'table' },
+    children: [
+     
+      {
+        path: 'shareDoc/index',
+        component: (resolve) => require(['@/views/bizDoc/shareDoc/index'], resolve),
+        name: 'shareDoc',
+        meta: { title: '文档维护', icon: 'table' }
+        
+      },
+      {
+        path: 'shareDoc/docList/:docId',
+        hidden:true,
+        component: (resolve) => require(['@/views/bizDoc/shareDoc/docList'], resolve),
+        name: 'docList',
+        meta: { title: '文档编辑测试', icon: 'table' }
+        
+      },
+      // {
+      //   path: 'dyncDoc/index',
+      //   component: (resolve) => require(['@/views/bizDoc/dyncDoc/index'], resolve),
+      //   name: 'dyncDoc',
+      //   meta: { title: '动态属性测试', icon: '' }
+        
+      // }
+    ]
+  },
+
+  {
+    path: '/bizTP/',
+    component: Layout,
+    hidden: false,
+    meta: { title: '合作伙伴', icon: 'table' },
+    children: [
+      {
+        path: 'bizTP/tpType/index',
+        component: (resolve) => require(['@/views/bizTP/tpType/index'], resolve),
+        name: 'tpType',
+        meta: { title: '类型设置', icon: 'table' }
+        
+      },
+      {
+        path: 'bizTP/tpList/index',
+        component: (resolve) => require(['@/views/bizTP/tpInfo/index'], resolve),
+        name: 'tpList',
+        meta: { title: '合作伙伴', icon: 'table' }
+        
+      },
+    ]
+  },
+
+ 
+
+  {
+    path: '/bizApp/',
+    component: Layout,
+    hidden: false,
+    meta: { title: '商品管理', icon: 'table' },
+    children: [
+      {
+        path: 'saleGoods/category/index',
+        component: (resolve) => require(['@/views/bizApp/saleGoods/category/index'], resolve),
+        name: 'category',
+        meta: { title: '商品分类', icon: 'table' }
+        
+      },
+      {
+        path: 'saleGoods/goods/index',
+        component: (resolve) => require(['@/views/bizApp/saleGoods/productItem/index'], resolve),
+        name: 'productItem',
+        meta: { title: '商品列表', icon: 'table' }
         
       }
     ]
   },
 
-  
+ 
 
   {
     path: '/system',
     component: Layout,
     hidden: false,
-    meta: { title: '系统管理', icon: '' },
+    meta: { title: '系统管理', icon: 'table' },
     children: [
       {
         path: 'user/index',
         component: (resolve) => require(['@/views/system/user/index'], resolve),
         hidden:false,
-        name: 'type',
-        meta: { title: '用户管理', icon: '' }
+        name: 'user',
+        meta: { title: '用户管理', icon: 'table' }
       },
       {
         path: 'role/index',
         component: (resolve) => require(['@/views/system/role/index'], resolve),
         hidden:false,
-        name: 'type',
-        meta: { title: '角色管理', icon: '' }
+        name: 'role',
+        meta: { title: '角色管理', icon: 'table' }
       },
       {
         path: 'menu/index',
         component: (resolve) => require(['@/views/system/menu/index'], resolve),
         name: 'menu',
-        meta: { title: '菜单管理', icon: '' }
+        meta: { title: '菜单管理', icon: 'table' }
         
       },
       {
         path: 'dept/index',
         component: (resolve) => require(['@/views/system/dept/index'], resolve),
-        name: 'menu',
-        meta: { title: '部门管理', icon: '' }
+        name: 'dept',
+        meta: { title: '部门管理', icon: 'table' }
         
       },
       {
         path: 'post/index',
         component: (resolve) => require(['@/views/system/post/index'], resolve),
         name: 'post',
-        meta: { title: '岗位管理', icon: '' }
+        meta: { title: '岗位管理', icon: 'table' }
         
       },
 
@@ -218,20 +276,20 @@ export const constantRoutes = [
         component: (resolve) => require(['@/views/system/dict/index'], resolve),
         hidden:false,
         name: 'type',
-        meta: { title: '数据字典', icon: '' }
+        meta: { title: '数据字典', icon: 'table' }
       },
       {
         path: 'dict/type/data/:dictId',
         component: (resolve) => require(['@/views/system/dict/data'], resolve),
         hidden:true,
         name: 'Data',
-        meta: { title: '字典数据', icon: '' }
+        meta: { title: '字典数据', icon: 'table' }
       },
       {
         path: 'config/index',
         component: (resolve) => require(['@/views/system/config/index'], resolve),
         name: 'config',
-        meta: { title: '参数配置', icon: '' }
+        meta: { title: '参数配置', icon: 'table' }
         
       },
      
@@ -240,7 +298,7 @@ export const constantRoutes = [
         path: 'notice/index',
         component: (resolve) => require(['@/views/system/notice/index'], resolve),
         name: 'notice',
-        meta: { title: '通知公告', icon: '' }
+        meta: { title: '通知公告', icon: 'table' }
         
       }
     ]
@@ -254,41 +312,41 @@ export const constantRoutes = [
     path: '/monitor',
     component: Layout,
     hidden: false,
-    meta: { title: '系统监控', icon: '' },
+    meta: { title: '系统监控', icon: 'table' },
     children: [
       {
         path: 'server/index',
         component: (resolve) => require(['@/views/monitor/server/index'], resolve),
         name: 'server',
-        meta: { title: '服务监控', icon: '' }
+        meta: { title: '服务监控', icon: 'table' }
         
       },
       {
         path: 'cache/index',
         component: (resolve) => require(['@/views/monitor/cache/index'], resolve),
         name: 'cache',
-        meta: { title: '缓存监控', icon: '' }
+        meta: { title: '缓存监控', icon: 'table' }
         
       },
       {
         path: 'online/index',
         component: (resolve) => require(['@/views/monitor/online/index'], resolve),
         name: 'online',
-        meta: { title: '在线用户', icon: '' }
+        meta: { title: '在线用户', icon: 'table' }
         
       },
       {
         path: 'operlog/index',
         component: (resolve) => require(['@/views/monitor/operlog/index'], resolve),
         name: 'operlog',
-        meta: { title: '操作日志', icon: '' }
+        meta: { title: '操作日志', icon: 'table' }
         
       },
       {
         path: 'logininfor/index',
         component: (resolve) => require(['@/views/monitor/logininfor/index'], resolve),
         name: 'logininfor',
-        meta: { title: '登录日志', icon: '' }
+        meta: { title: '登录日志', icon: 'table' }
         
       }
      

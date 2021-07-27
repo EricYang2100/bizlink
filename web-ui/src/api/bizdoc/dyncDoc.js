@@ -3,7 +3,7 @@ import request from '@/utils/request'
 // 查询列表
 export function listDoc(query) {
   return request({
-    url: '/dp/myDyncDoc/list',
+    url: '/bizDoc/myDyncDoc/list',
     method: 'get',
     params: query
   })
@@ -12,7 +12,7 @@ export function listDoc(query) {
 // 查询详细
 export function getDoc(id) {
   return request({
-    url: '/dp/myDyncDoc/' + id,
+    url: '/bizDoc/myDyncDoc/' + id,
     method: 'get'
   })
 }
@@ -23,7 +23,7 @@ export function getDoc(id) {
 // 新增
 export function addDoc(data) {
   return request({
-    url: '/dp/myDyncDoc',
+    url: '/bizDoc/myDyncDoc',
     method: 'post',
     data: data
   })
@@ -32,7 +32,7 @@ export function addDoc(data) {
 // 修改
 export function updateDoc(data) {
   return request({
-    url: '/dp/myDyncDoc',
+    url: '/bizDoc/myDyncDoc',
     method: 'put',
     data: data
   })
@@ -41,7 +41,7 @@ export function updateDoc(data) {
 // 删除
 export function delDoc(id) {
   return request({
-    url: '/dp/myDyncDoc/' + id,
+    url: '/bizDoc/myDyncDoc/' + id,
     method: 'delete'
   })
 }
@@ -49,7 +49,7 @@ export function delDoc(id) {
 // 导出商品分类
 export function exportDoc(query) {
   return request({
-    url: '/dp/myDyncDoc/export',
+    url: '/bizDoc/myDyncDoc/export',
     method: 'get',
     params: query
   })

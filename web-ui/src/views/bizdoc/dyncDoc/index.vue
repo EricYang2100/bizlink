@@ -118,7 +118,7 @@
 </template>
 
 <script>
-import { listDoc, getDoc, delDoc, addDoc, updateDoc } from '@/api/bizdoc/dyncDoc'
+import { listDoc, getDoc, delDoc, addDoc, updateDoc } from '@/api/bizDoc/dyncDoc'
 
 export default {
   name: 'MyDyncDoc',

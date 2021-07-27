@@ -1,6 +1,6 @@
 package com.welinkdata.gateway.framework.web.service;
 
-import com.welinkdata.gateway.admin.service.SysUserService;
+import com.welinkdata.gateway.system.service.SysUserService;
 import com.welinkdata.gateway.common.core.domain.entity.SysUser;
 import com.welinkdata.gateway.common.core.domain.model.LoginUser;
 
@@ -14,8 +14,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-
-import java.util.Set;
 
 /**
  * 用户验证处理

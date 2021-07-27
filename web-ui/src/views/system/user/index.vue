@@ -140,10 +140,10 @@
 
         <el-table v-loading="loading" :data="userList" @selection-change="handleSelectionChange">
           <el-table-column type="selection" width="50" align="center" />
-          <el-table-column v-if="columns[0].visible" key="userId" label="用户编号" align="center" prop="userId" />
+          <!-- <el-table-column v-if="columns[0].visible" key="userId" label="用户编号" align="center" prop="userId" /> -->
           <el-table-column v-if="columns[1].visible" key="userName" label="用户名称" align="center" prop="userName" :show-overflow-tooltip="true" />
           <el-table-column v-if="columns[2].visible" key="nickName" label="用户昵称" align="center" prop="nickName" :show-overflow-tooltip="true" />
-          <el-table-column v-if="columns[3].visible" key="deptName" label="部门" align="center" prop="dept.deptName" :show-overflow-tooltip="true" />
+          <el-table-column v-if="columns[3].visible" key="deptName" label="部门" align="center" prop="deptId" :formatter="deptFormat" />
           <el-table-column v-if="columns[4].visible" key="phoneNumber" label="手机号码" align="center" prop="phoneNumber" width="120" />
           <el-table-column v-if="columns[5].visible" key="status" label="状态" align="center">
             <template slot-scope="scope">
@@ -346,7 +346,7 @@
 <script>
 import { listUser, getUser, delUser, addUser, updateUser, exportUser, resetUserPwd, changeUserStatus, importTemplate } from '@/api/system/user'
 import { getToken } from '@/utils/auth'
-import { treeselect } from '@/api/system/dept'
+import { treeselect, deptDictList } from '@/api/system/dept'
 import Treeselect from '@riophae/vue-treeselect'
 import '@riophae/vue-treeselect/dist/vue-treeselect.css'
 
@@ -383,6 +383,10 @@ export default {
       dateRange: [],
       // 状态数据字典
       statusOptions: [],
+
+      // 部门数据字典
+      deptDictOptions: [],
+
       // 性别状态字典
       sexOptions: [],
       // 岗位选项
@@ -469,6 +473,9 @@ export default {
     this.getDicts('sys_normal_disable').then(response => {
       this.statusOptions = response.data
     })
+    deptDictList().then(response => {
+      this.deptDictOptions = response.data
+    })
     this.getDicts('sys_user_sex').then(response => {
       this.sexOptions = response.data
     })
@@ -492,6 +499,11 @@ export default {
       treeselect().then(response => {
         this.deptOptions = response.data
       })
+    },
+
+    // 字典状态字典翻译
+    deptFormat(row, column) {
+      return this.selectDictLabel(this.deptDictOptions, row.deptId)
     },
     // 筛选节点
     filterNode(value, data) {
@@ -583,7 +595,7 @@ export default {
         this.form.roleIds = response.roleIds
         this.open = true
         this.title = '修改用户'
-        this.form.password = ''
+        // this.form.password = ''
       })
     },
     /** 重置密码按钮操作 */

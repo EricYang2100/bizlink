@@ -1,0 +1,37 @@
+[{
+  "_id": {
+    "$oid": "60b9db8a66975f425f56a8cc"
+  },
+  "categoryId": "60b9bccdb8138e3ff59b0168",
+  "name": "p1",
+  "code": "1",
+  "spec": "1",
+  "uom": "包",
+  "status": "0",
+  "df": {},
+  "createTime": {
+    "$date": "2021-06-04T07:51:38.573Z"
+  },
+  "updateTime": {
+    "$date": "2021-06-04T07:51:38.573Z"
+  },
+  "_class": "com.welinkdata.gateway.bizApp.saleGoods.domain.ProductItem"
+},{
+  "_id": {
+    "$oid": "60c5fa220e993b1d9e50ae55"
+  },
+  "categoryId": "60b9bcb4b8138e3ff59b0167",
+  "name": "A2",
+  "code": "111",
+  "spec": "222",
+  "uom": "包",
+  "status": "0",
+  "df": {},
+  "createTime": {
+    "$date": "2021-06-13T12:29:22.047Z"
+  },
+  "updateTime": {
+    "$date": "2021-06-13T12:29:22.047Z"
+  },
+  "_class": "com.welinkdata.gateway.bizApp.saleGoods.domain.ProductItem"
+}]

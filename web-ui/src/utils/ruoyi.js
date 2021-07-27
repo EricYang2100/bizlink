@@ -81,6 +81,7 @@ export function selectDictLabel(datas, value) {
 	return actions.join('');
 }
 
+
 // 回显数据字典（字符串数组）
 export function selectDictLabels(datas, value, separator) {
 	var actions = [];

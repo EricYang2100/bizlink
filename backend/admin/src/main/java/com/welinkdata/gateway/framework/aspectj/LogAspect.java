@@ -1,7 +1,7 @@
 package com.welinkdata.gateway.framework.aspectj;
 
 import com.alibaba.fastjson.JSON;
-import com.welinkdata.gateway.admin.domain.SysOperLog;
+import com.welinkdata.gateway.system.domain.SysOperLog;
 import com.welinkdata.gateway.common.annotation.Log;
 import com.welinkdata.gateway.common.core.domain.model.LoginUser;
 import com.welinkdata.gateway.common.enums.BusinessStatus;

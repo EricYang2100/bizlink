@@ -1,10 +1,10 @@
 package com.welinkdata.gateway.framework.manager.factory;
 
 
-import com.welinkdata.gateway.admin.domain.SysLoginInfo;
-import com.welinkdata.gateway.admin.domain.SysOperLog;
-import com.welinkdata.gateway.admin.service.SysLoginInfoService;
-import com.welinkdata.gateway.admin.service.SysOperLogService;
+import com.welinkdata.gateway.system.domain.SysLoginInfo;
+import com.welinkdata.gateway.system.domain.SysOperLog;
+import com.welinkdata.gateway.system.service.SysLoginInfoService;
+import com.welinkdata.gateway.system.service.SysOperLogService;
 import com.welinkdata.gateway.common.constant.Constants;
 import com.welinkdata.gateway.common.utils.LogUtils;
 import com.welinkdata.gateway.common.utils.ServletUtils;

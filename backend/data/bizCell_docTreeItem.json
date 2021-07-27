@@ -1,0 +1,127 @@
+[{
+  "_id": {
+    "$oid": "60b5e7471782511a090600f8"
+  },
+  "code": "mydoc",
+  "name": "我的文档",
+  "docType": "DIR",
+  "parentId": "0",
+  "orderNum": 0,
+  "docPath": "mydoc",
+  "status": "0",
+  "createTime": {
+    "$date": "2021-06-01T07:52:39Z"
+  },
+  "updateTime": {
+    "$date": "2021-06-02T06:14:04.555Z"
+  },
+  "_class": "com.welinkdata.gateway.bizCell.domain.DocTreeItem"
+},{
+  "_id": {
+    "$oid": "60b6ef71fb511d42c2fb8a25"
+  },
+  "code": "tpdoc",
+  "name": "合作伙伴文档",
+  "docType": "DIR",
+  "parentId": "0",
+  "orderNum": 1,
+  "docPath": "tpdoc",
+  "status": "0",
+  "createTime": {
+    "$date": "2021-06-02T02:39:45Z"
+  },
+  "updateTime": {
+    "$date": "2021-06-02T06:14:11.624Z"
+  },
+  "_class": "com.welinkdata.gateway.bizCell.domain.DocTreeItem"
+},{
+  "_id": {
+    "$oid": "60b6f450fb511d42c2fb8a26"
+  },
+  "code": "baseDoc",
+  "name": "基础信息",
+  "docType": "DIR",
+  "parentId": "60b5e7471782511a090600f8",
+  "orderNum": 0,
+  "docPath": "mydoc.baseDoc",
+  "status": "0",
+  "createTime": {
+    "$date": "2021-06-02T03:00:32.648Z"
+  },
+  "updateTime": {
+    "$date": "2021-06-02T06:14:04.560Z"
+  },
+  "_class": "com.welinkdata.gateway.bizCell.domain.DocTreeItem"
+},{
+  "_id": {
+    "$oid": "60b6f47afb511d42c2fb8a27"
+  },
+  "code": "shareDoc",
+  "name": "共享文档",
+  "docType": "DIR",
+  "parentId": "60b5e7471782511a090600f8",
+  "orderNum": 1,
+  "docPath": "mydoc.shareDoc",
+  "status": "0",
+  "createTime": {
+    "$date": "2021-06-02T03:01:14.033Z"
+  },
+  "updateTime": {
+    "$date": "2021-06-02T06:14:04.563Z"
+  },
+  "_class": "com.welinkdata.gateway.bizCell.domain.DocTreeItem"
+},{
+  "_id": {
+    "$oid": "60b6f4b9fb511d42c2fb8a28"
+  },
+  "code": "goods",
+  "name": "商品信息",
+  "docType": "DOC-SHARE",
+  "parentId": "60b6f47afb511d42c2fb8a27",
+  "orderNum": 0,
+  "docPath": "mydoc.shareDoc.goods",
+  "status": "0",
+  "createTime": {
+    "$date": "2021-06-02T03:02:17.557Z"
+  },
+  "updateTime": {
+    "$date": "2021-06-02T06:14:04.568Z"
+  },
+  "_class": "com.welinkdata.gateway.bizCell.domain.DocTreeItem"
+},{
+  "_id": {
+    "$oid": "60d2d012d74be8233e592285"
+  },
+  "code": "test",
+  "name": "测试",
+  "docType": "DIR",
+  "parentId": "60b5e7471782511a090600f8",
+  "orderNum": 2,
+  "docPath": "mydoc.test",
+  "status": "0",
+  "createTime": {
+    "$date": "2021-06-23T06:09:22.408Z"
+  },
+  "updateTime": {
+    "$date": "2021-06-23T06:09:22.408Z"
+  },
+  "_class": "com.welinkdata.gateway.bizCell.domain.DocTreeItem"
+},{
+  "_id": {
+    "$oid": "60d2d040d74be8233e592286"
+  },
+  "code": "doc1",
+  "name": "文档1",
+  "docType": "DOC-SHARE",
+  "parentId": "60d2d012d74be8233e592285",
+  "orderNum": 1,
+  "docPath": "mydoc.test.doc1",
+  "status": "0",
+  "createTime": {
+    "$date": "2021-06-23T06:10:08Z"
+  },
+  "updateTime": {
+    "$date": "2021-06-23T06:17:55.778Z"
+  },
+  "_class": "com.welinkdata.gateway.bizCell.domain.DocTreeItem"
+}]

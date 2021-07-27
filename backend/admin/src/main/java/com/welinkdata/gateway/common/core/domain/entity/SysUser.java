@@ -44,8 +44,6 @@ public class SysUser extends MongoEntity {
 
     private boolean isAdmin;
 
-
-
     /** 最后登录IP */
     private String loginIp;
 
@@ -56,6 +54,8 @@ public class SysUser extends MongoEntity {
     /** 所属部门 */
     private String deptId;
 
+    /*＊　冗余部门路径，供查询　    */
+    private String deptAncestors;
 
     /** 角色组 */
     private String[] roleIds;
